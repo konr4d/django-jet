@@ -81,14 +81,8 @@ gulp.task('vendor-styles', function() {
                     console.error(error);
                 }),
             gulp.src([
-                './node_modules/perfect-scrollbar/src/css/main.scss'
+                './node_modules/perfect-scrollbar/css/perfect-scrollbar.css',
             ])
-                .pipe(sass({
-                    outputStyle: 'compressed'
-                }))
-                .on('error', function(error) {
-                    console.error(error);
-                })
         )
             .pipe(postcss(cssProcessors))
             .on('error', function(error) {
